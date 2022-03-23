@@ -17,11 +17,8 @@ void hanoi(int n, char a, char b, char c)
     {
         return;
     }
-    else
-    {
-        hanoi(n - 1, a, c, b);
-        printf("%c -> %c\n", a, c);
-        hanoi(n - 1, b, a, c);
-    }
+    hanoi(n - 1, a, c, b);
+    printf("%c -> %c\n", a, c);
+    hanoi(n - 1, b, a, c);
     return;
 }
