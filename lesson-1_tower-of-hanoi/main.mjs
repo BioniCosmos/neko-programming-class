@@ -12,7 +12,6 @@ function hanoi(n, a, b, c) {
     if (!n) {
         return
     }
-
     hanoi(n - 1, a, c, b)
     console.log(a, '->', c)
     hanoi(n - 1, b, a, c)

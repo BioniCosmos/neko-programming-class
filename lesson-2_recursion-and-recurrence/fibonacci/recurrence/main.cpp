@@ -5,6 +5,7 @@
 int main() {
     int n;
     std::cin >> n;
+
     auto fibonacci = std::vector<int>(n + 1);
     fibonacci[0] = fibonacci[1] = 1;
     for (int i = 2; i <= n; i++) {

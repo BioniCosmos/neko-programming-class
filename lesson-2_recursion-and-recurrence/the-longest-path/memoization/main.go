@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+    "fmt"
+    "math"
+)
 
 func main() {
     var n int
@@ -8,10 +11,10 @@ func main() {
 
     t := make([][]int, n)
     rec := make([][]int, n)
-    for i := range t {
+    for i := 0; i < n; i++ {
         t[i] = make([]int, i+1)
         rec[i] = make([]int, i+1)
-        for j := range t[i] {
+        for j := 0; j < i+1; j++ {
             fmt.Scan(&t[i][j])
             rec[i][j] = -1
         }
@@ -24,14 +27,10 @@ func getTheLongest(t [][]int, n, i, j int, rec [][]int) int {
         return t[i][j]
     }
     if rec[i][j] == -1 {
-        rec[i][j] = max(getTheLongest(t, n, i+1, j, rec), getTheLongest(t, n, i+1, j+1, rec)) + t[i][j]
+        rec[i][j] = int(math.Max(
+            float64(getTheLongest(t, n, i+1, j, rec)),
+            float64(getTheLongest(t, n, i+1, j+1, rec)),
+        )) + t[i][j]
     }
     return rec[i][j]
-}
-
-func max(x, y int) int {
-    if x < y {
-        return y
-    }
-    return x
 }

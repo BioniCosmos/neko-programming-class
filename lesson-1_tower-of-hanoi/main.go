@@ -5,6 +5,7 @@ import "fmt"
 func main() {
     var n int
     fmt.Scan(&n)
+
     var a, b, c byte = 'A', 'B', 'C'
     hanoi(n, a, b, c)
 }

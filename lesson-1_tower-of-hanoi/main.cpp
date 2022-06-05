@@ -6,6 +6,7 @@ void hanoi(int n, char a, char b, char c);
 int main() {
     int n;
     std::cin >> n;
+
     char a = 'A', b = 'B', c = 'C';
     hanoi(n, a, b, c);
     return 0;

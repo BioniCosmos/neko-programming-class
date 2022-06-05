@@ -3,7 +3,8 @@ use std::io;
 fn main() {
     let mut n = String::new();
     io::stdin().read_line(&mut n).unwrap();
-    let n = n.trim().parse::<i32>().unwrap();
+
+    let n = n.trim().parse().unwrap();
     let a = 'A';
     let b = 'B';
     let c = 'C';

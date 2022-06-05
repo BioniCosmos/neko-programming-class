@@ -6,7 +6,7 @@ int fibonacci(int n);
 int main() {
     int n;
     std::cin >> n;
-    fmt::print("{}", fibonacci(n));
+    fmt::print("{}\n", fibonacci(n));
     return 0;
 }
 

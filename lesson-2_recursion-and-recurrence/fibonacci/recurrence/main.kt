@@ -1,6 +1,6 @@
 fun main() {
     val n = readLine()!!.toInt()
-    val fibonacci = IntArray(n + 1)
+    val fibonacci = Array(n + 1) { 0 }
     fibonacci[0] = 1
     fibonacci[1] = 1
     for (i in 2..n) {
